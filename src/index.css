@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.maxContainer {
+  padding-right: 7%;
+  padding-left: 7%;
+}
+
+#JSCaption {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(25, 25, 87),
+    rgb(127, 148, 165)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* For the Scrollbar */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cfb8b8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.radient {
+  
+}
