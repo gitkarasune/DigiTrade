@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <div className='min-h-screen text-white bg-gray-900 pb-36 pt-28 maxContainer'>
-      <div className='radient'>
+      <div className=''>
         <h1 className='text-5xl md:text-6xl lg:text-7xl text-center font-bold mt-36 ' id='JSCaption'>Largest <br /> Crypto Marketplace</h1>
         <p className='mt-6 text-center text-lg'>Welcome to the world&apos;s largest cryptocurrency marketplace. <br /> Sign up to explore more about cryptos.</p>
 

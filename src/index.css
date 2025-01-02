@@ -11,10 +11,13 @@
   background-image: linear-gradient(
     to bottom,
     rgb(25, 25, 87),
+    rgb(61, 61, 143),
     rgb(127, 148, 165)
   );
+  background-size: 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: animate-background 10s infinite ease-in-out;
 }
 
 /* For the Scrollbar */
@@ -37,5 +40,21 @@
 }
 
 .radient {
-  
+  background: linear-gradient(
+    to right, #833ab4, #fd1d1d, #fcb045
+  );
+  background-size: 400% 400%;
+  animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

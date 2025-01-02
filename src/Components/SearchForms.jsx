@@ -37,7 +37,7 @@ const Placeholder = ({ allCoin, setDisplayCoin }) => {
           value={input}
         />
 
-        <button type="submit" className=" cursor-pointer hover:scale-110 text-gray-400 absolute right-3 top-1 bg-gray-700 rounded-full p-3" >
+        <button type="submit" className=" cursor-pointer text-gray-400 absolute scale-110 right-0 top-1 bg-gray-700 rounded-sm p-3" >
           <FaSearch className="" />
         </button>
         </form> 
