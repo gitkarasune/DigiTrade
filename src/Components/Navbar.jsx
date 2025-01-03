@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { SiCytoscapedotjs } from "react-icons/si"
 import { CoinContext } from "../Context/CoinContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -73,12 +74,12 @@ const Navbar = () => {
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center md:mr-7">
-            <a
-              href="/"
+            <Link
+              to={"/"}
               className="text-2xl font-bold text-indigo-600 dark:text-indigo-400"
             >
               <SiCytoscapedotjs className="text-6xl rounded-full"/>
-            </a>
+            </Link>
           </div>
 
           <div className="flex ml-2 mr-2 items-center">
@@ -99,7 +100,7 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex items-center">
-            <select onChange={currencyHandler} className="w-28 border rounded-sm bg-gray-800 border-gray-900 outline-none">
+            <select onChange={currencyHandler} className="w-14 border rounded-sm bg-gray-800 border-gray-900 outline-none">
               <option className="text-sm text-white" value="usd">USD</option>
               <option className="text-sm text-white" value="eur">EUR</option>
               <option className="text-sm text-white" value="inr">INR</option>
