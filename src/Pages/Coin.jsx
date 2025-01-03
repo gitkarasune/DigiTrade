@@ -84,10 +84,6 @@ const Coin = () => {
             </ul>
           </div>
 
-          <div>
-            <p>{coinData.description.en}</p>
-          </div>
-
         </div>
       </div>
     )
