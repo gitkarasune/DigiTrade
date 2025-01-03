@@ -13,23 +13,23 @@ const Coin = () => {
 
   const fetchCoinData = async () => {
 
-      const options = {
-        method: 'GET',
-        headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-1fUe6YzRUE5TgqCNvKNncEr7'}
-      };
-      
-      fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options)
-        .then(res => res.json())
-        .then(res => setCoinData(res))
-        .catch(err => console.error(err));
+    const options = {
+      method: 'GET',
+      headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-1fUe6YzRUE5TgqCNvKNncEr7' }
+    };
+
+    fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options)
+      .then(res => res.json())
+      .then(res => setCoinData(res))
+      .catch(err => console.error(err));
   }
 
   const fetchHistoricalData = async () => {
     const options = {
       method: 'GET',
-      headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-1fUe6YzRUE5TgqCNvKNncEr7'}
+      headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-1fUe6YzRUE5TgqCNvKNncEr7' }
     };
-    
+
     fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency.name}&days=10&interval=daily`, options)
       .then(res => res.json())
       .then(res => setHistoricalData(res))
@@ -40,7 +40,7 @@ const Coin = () => {
     fetchCoinData();
     fetchHistoricalData();
   }, [currency]);
-  
+
   if (coinData && historicalData) {
     return (
       <div className='min-h-screen text-white bg-gray-900 pb-20 pt-28 maxContainer'>
@@ -48,7 +48,7 @@ const Coin = () => {
         <div className="coin">
           <div className='coin-name'>
             <img src={coinData.image.large} alt="" />
-            <p><b>{coinData.name} ({ coinData.symbol.toUpperCase()})</b></p>
+            <p><b>{coinData.name} ({coinData.symbol.toUpperCase()})</b></p>
           </div>
 
           <div className='coin-chart'>
@@ -82,6 +82,10 @@ const Coin = () => {
               <li>24 Hour low</li>
               <li>{currency.symbol} {coinData.market_data.low_24h[currency.name].toLocaleString()}</li>
             </ul>
+          </div>
+
+          <div>
+            <p>{coinData.description.en}</p>
           </div>
 
         </div>
